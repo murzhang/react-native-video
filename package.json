@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-video@git+https://github.com/react-native-community/react-native-video.git",
+        "scope": null,
+        "escapedName": "react-native-video",
+        "name": "react-native-video",
+        "rawSpec": "git+https://github.com/react-native-community/react-native-video.git",
+        "spec": "git+https://github.com/react-native-community/react-native-video.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:react-native-community/react-native-video.git",
+          "sshUrl": "git+ssh://git@github.com/react-native-community/react-native-video.git",
+          "httpsUrl": "git+https://github.com/react-native-community/react-native-video.git",
+          "gitUrl": "git://github.com/react-native-community/react-native-video.git",
+          "shortcut": "github:react-native-community/react-native-video",
+          "directUrl": "https://raw.githubusercontent.com/react-native-community/react-native-video/master/package.json"
+        }
+      },
+      "d:\\USEABCV2\\SourceCode\\YSApp"
+    ]
+  ],
+  "_from": "git+https://github.com/react-native-community/react-native-video.git",
+  "_id": "react-native-video@1.1.0",
+  "_inCache": true,
+  "_location": "/react-native-video",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-video@git+https://github.com/react-native-community/react-native-video.git",
+    "scope": null,
+    "escapedName": "react-native-video",
+    "name": "react-native-video",
+    "rawSpec": "git+https://github.com/react-native-community/react-native-video.git",
+    "spec": "git+https://github.com/react-native-community/react-native-video.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:react-native-community/react-native-video.git",
+      "sshUrl": "git+ssh://git@github.com/react-native-community/react-native-video.git",
+      "httpsUrl": "git+https://github.com/react-native-community/react-native-video.git",
+      "gitUrl": "git://github.com/react-native-community/react-native-video.git",
+      "shortcut": "github:react-native-community/react-native-video",
+      "directUrl": "https://raw.githubusercontent.com/react-native-community/react-native-video/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/react-native-community/react-native-video.git#72a46bc308d63f6ae95bb2a18b9ee6feaf867860",
+  "_shasum": "51e27b41bb930052214ac3f6902ea3801dd5d756",
+  "_shrinkwrap": null,
+  "_spec": "react-native-video@git+https://github.com/react-native-community/react-native-video.git",
+  "_where": "d:\\USEABCV2\\SourceCode\\YSApp",
+  "author": {
+    "name": "Brent Vatne",
+    "email": "brentvatne@gmail.com",
+    "url": "https://github.com/brentvatne"
+  },
+  "bugs": {
+    "url": "https://github.com/brentvatne/react-native-video/issues"
+  },
+  "contributors": [
+    {
+      "name": "Johannes Lumpe",
+      "email": "johannes@lum.pe"
+    },
+    {
+      "name": "Baris Sencan",
+      "email": "baris.sncn@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "keymirror": "0.1.1",
+    "react-native-windows": "0.41.0-rc.0"
+  },
+  "description": "A <Video /> element for react-native",
+  "devDependencies": {
+    "babel-eslint": "5.0.0-beta8",
+    "eslint": "1.10.3",
+    "eslint-config-airbnb": "4.0.0",
+    "eslint-plugin-react": "3.16.1",
+    "jest-cli": "0.2.1"
+  },
+  "gitHead": "72a46bc308d63f6ae95bb2a18b9ee6feaf867860",
+  "homepage": "https://github.com/brentvatne/react-native-video#readme",
+  "license": "MIT",
+  "main": "Video.js",
+  "name": "react-native-video",
+  "optionalDependencies": {},
+  "readme": "## react-native-video\r\n\r\nA `<Video>` component for react-native, as seen in\r\n[react-native-login](https://github.com/brentvatne/react-native-login)!\r\n\r\nRequires react-native >= 0.40.0, for RN support of 0.19.0 - 0.39.0 please use a pre 1.0 version.\r\n\r\n### Add it to your project\r\n\r\nRun `npm i -S react-native-video`\r\n\r\n#### iOS\r\n\r\nRun `react-native link` to link the react-native-video library.\r\n\r\nIf you would like to allow other apps to play music over your video component, add:\r\n\r\n**AppDelegate.m**\r\n\r\n```objective-c\r\n#import <AVFoundation/AVFoundation.h>  // import\r\n\r\n- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions\r\n{\r\n  ...\r\n  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];  // allow\r\n  ...\r\n}\r\n```\r\nNote: you can also use the `ignoreSilentSwitch` prop, shown below.\r\n\r\n#### Android\r\n\r\nRun `react-native link` to link the react-native-video library.\r\n\r\nOr if you have trouble, make the following additions to the given files manually:\r\n\r\n**android/settings.gradle**\r\n\r\n```gradle\r\ninclude ':react-native-video'\r\nproject(':react-native-video').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-video/android')\r\n```\r\n\r\n**android/app/build.gradle**\r\n\r\n```gradle\r\ndependencies {\r\n   ...\r\n   compile project(':react-native-video')\r\n}\r\n```\r\n\r\n**MainApplication.java**\r\n\r\nOn top, where imports are:\r\n\r\n```java\r\nimport com.brentvatne.react.ReactVideoPackage;\r\n```\r\n\r\nAdd the `ReactVideoPackage` class to your list of exported packages.\r\n\r\n```java\r\n@Override\r\nprotected List<ReactPackage> getPackages() {\r\n    return Arrays.asList(\r\n            new MainReactPackage(),\r\n            new ReactVideoPackage()\r\n    );\r\n}\r\n```\r\n\r\n#### Windows\r\n\r\nMake the following additions to the given files manually:\r\n\r\n**windows/myapp.sln**\r\n\r\nAdd the `ReactNativeVideo` project to your solution.\r\n\r\n1. Open the solution in Visual Studio 2015\r\n2. Right-click Solution icon in Solution Explorer > Add > Existing Project...\r\n3.\r\n  UWP: Select `node_modules\\react-native-video\\windows\\ReactNativeVideo\\ReactNativeVideo.csproj`\r\n  WPF: Select `node_modules\\react-native-video\\windows\\ReactNativeVideo.Net46\\ReactNativeVideo.Net46.csproj`\r\n\r\n**windows/myapp/myapp.csproj**\r\n\r\nAdd a reference to `ReactNativeVideo` to your main application project. From Visual Studio 2015:\r\n\r\n1. Right-click main application project > Add > Reference...\r\n2.\r\n  UWP: Check `ReactNativeVideo` from Solution Projects.\r\n  WPF: Check `ReactNativeVideo.Net46` from Solution Projects.\r\n\r\n**MainPage.cs**\r\n\r\nAdd the `ReactVideoPackage` class to your list of exported packages.\r\n```cs\r\nusing ReactNative;\r\nusing ReactNative.Modules.Core;\r\nusing ReactNative.Shell;\r\nusing ReactNativeVideo; // <-- Add this\r\nusing System.Collections.Generic;\r\n...\r\n\r\n        public override List<IReactPackage> Packages\r\n        {\r\n            get\r\n            {\r\n                return new List<IReactPackage>\r\n                {\r\n                    new MainReactPackage(),\r\n                    new ReactVideoPackage(), // <-- Add this\r\n                };\r\n            }\r\n        }\r\n\r\n...\r\n```\r\n\r\n## Usage\r\n\r\n```javascript\r\n// Within your render function, assuming you have a file called\r\n// \"background.mp4\" in your project. You can include multiple videos\r\n// on a single screen if you like.\r\n\r\n<Video source={{uri: \"background\"}}   // Can be a URL or a local file.\r\n       ref={(ref) => {\r\n         this.player = ref\r\n       }}                                      // Store reference\r\n       rate={1.0}                              // 0 is paused, 1 is normal.\r\n       volume={1.0}                            // 0 is muted, 1 is normal.\r\n       muted={false}                           // Mutes the audio entirely.\r\n       paused={false}                          // Pauses playback entirely.\r\n       resizeMode=\"cover\"                      // Fill the whole screen at aspect ratio.*\r\n       repeat={true}                           // Repeat forever.\r\n       playInBackground={false}                // Audio continues to play when app entering background.\r\n       playWhenInactive={false}                // [iOS] Video continues to play when control or notification center are shown.\r\n       ignoreSilentSwitch={\"ignore\"}           // [iOS] ignore | obey - When 'ignore', audio will still play with the iOS hard silent switch set to silent. When 'obey', audio will toggle with the switch. When not specified, will inherit audio settings as usual.\r\n       progressUpdateInterval={250.0}          // [iOS] Interval to fire onProgress (default to ~250ms)\r\n       onLoadStart={this.loadStart}            // Callback when video starts to load\r\n       onLoad={this.setDuration}               // Callback when video loads\r\n       onProgress={this.setTime}               // Callback every ~250ms with currentTime\r\n       onEnd={this.onEnd}                      // Callback when playback finishes\r\n       onError={this.videoError}               // Callback when video cannot be loaded\r\n       onBuffer={this.onBuffer}                // Callback when remote video is buffering\r\n       onTimedMetadata={this.onTimedMetadata}  // Callback when the stream receive some metadata\r\n       style={styles.backgroundVideo} />\r\n\r\n// Later to trigger fullscreen\r\nthis.player.presentFullscreenPlayer()\r\n\r\n// To set video position in seconds (seek)\r\nthis.player.seek(0)\r\n\r\n// Later on in your styles..\r\nvar styles = StyleSheet.create({\r\n  backgroundVideo: {\r\n    position: 'absolute',\r\n    top: 0,\r\n    left: 0,\r\n    bottom: 0,\r\n    right: 0,\r\n  },\r\n});\r\n```\r\n\r\n- * *For iOS you also need to specify muted for this to work*\r\n\r\n## Android Expansion File Usage\r\n\r\n```javascript\r\n// Within your render function, assuming you have a file called\r\n// \"background.mp4\" in your expansion file. Just add your main and (if applicable) patch version\r\n<Video source={{uri: \"background\", mainVer: 1, patchVer: 0}} // Looks for .mp4 file (background.mp4) in the given expansion version.\r\n       rate={1.0}                   // 0 is paused, 1 is normal.\r\n       volume={1.0}                 // 0 is muted, 1 is normal.\r\n       muted={false}                // Mutes the audio entirely.\r\n       paused={false}               // Pauses playback entirely.\r\n       resizeMode=\"cover\"           // Fill the whole screen at aspect ratio.\r\n       repeat={true}                // Repeat forever.\r\n       onLoadStart={this.loadStart} // Callback when video starts to load\r\n       onLoad={this.setDuration}    // Callback when video loads\r\n       onProgress={this.setTime}    // Callback every ~250ms with currentTime\r\n       onEnd={this.onEnd}           // Callback when playback finishes\r\n       onError={this.videoError}    // Callback when video cannot be loaded\r\n       style={styles.backgroundVideo} />\r\n\r\n// Later on in your styles..\r\nvar styles = Stylesheet.create({\r\n  backgroundVideo: {\r\n    position: 'absolute',\r\n    top: 0,\r\n    left: 0,\r\n    bottom: 0,\r\n    right: 0,\r\n  },\r\n});\r\n```\r\n\r\n### Load files with the RN Asset System\r\n\r\nThe asset system [introduced in RN `0.14`](http://www.reactnative.com/react-native-v0-14-0-released/) allows loading image resources shared across iOS and Android without touching native code. As of RN `0.31` [the same is true](https://github.com/facebook/react-native/commit/91ff6868a554c4930fd5fda6ba8044dbd56c8374) of mp4 video assets for Android. As of [RN `0.33`](https://github.com/facebook/react-native/releases/tag/v0.33.0) iOS is also supported. Requires `react-native-video@0.9.0`.\r\n\r\n```\r\n<Video\r\n  repeat\r\n  resizeMode='cover'\r\n  source={require('../assets/video/turntable.mp4')}\r\n  style={styles.backgroundVideo}\r\n/>\r\n```\r\n\r\n### Play in background on iOS\r\n\r\nTo enable audio to play in background on iOS the audio session needs to be set to `AVAudioSessionCategoryPlayback`. See [Apple documentation][3] for additional details. (NOTE: there is now a ticket to [expose this as a prop]( https://github.com/react-native-community/react-native-video/issues/310) )\r\n\r\n## Static Methods\r\n\r\n`seek(seconds)`\r\n\r\nSeeks the video to the specified time (in seconds). Access using a ref to the component\r\n\r\n`presentFullscreenPlayer()`\r\n\r\nToggles a fullscreen player. Access using a ref to the component.\r\n\r\n## Examples\r\n\r\n- See an [Example integration][1] in `react-native-login` *note that this example uses an older version of this library, before we used `export default` -- if you use `require` you will need to do `require('react-native-video').default` as per instructions above.*\r\n- Try the included [VideoPlayer example][2] yourself:\r\n\r\n   ```sh\r\n   git clone git@github.com:react-native-community/react-native-video.git\r\n   cd react-native-video/example\r\n   npm install\r\n   open ios/VideoPlayer.xcodeproj\r\n\r\n   ```\r\n\r\n   Then `Cmd+R` to start the React Packager, build and run the project in the simulator.\r\n\r\n- [Lumpen Radio](https://github.com/jhabdas/lumpen-radio) contains another example integration using local files and full screen background video.\r\n\r\n## TODOS\r\n\r\n- [ ] Add support for captions\r\n- [ ] Add support for playing multiple videos in a sequence (will interfere with current `repeat` implementation)\r\n- [x] Callback to get buffering progress for remote videos\r\n- [ ] Bring API closer to HTML5 `<Video>` [reference](http://devdocs.io/html/element/video)\r\n\r\n[1]: https://github.com/brentvatne/react-native-login/blob/56c47a5d1e23781e86e19b27e10427fd6391f666/App/Screens/UserInfoScreen.js#L32-L35\r\n[2]: https://github.com/react-native-community/react-native-video/tree/master/example\r\n[3]: https://developer.apple.com/library/ios/qa/qa1668/_index.html\r\n\r\n---\r\n\r\n**MIT Licensed**\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brentvatne/react-native-video.git"
+  },
+  "scripts": {
+    "test": "eslint *.js"
+  },
+  "version": "1.1.0"
+}
